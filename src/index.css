@@ -26,20 +26,19 @@ img{ max-width: 100% }
 
 /*Header*/
 .Header{
-	padding: 8rem 0;
+	padding: 6rem 0;
 	width: 100%;
 	background-image: url("bg.png");
 	background-position: center 32%;
 	color: var(--white);
 	text-align: center;
-	max-height: 150px;
-	height: 100%;
+	/*max-height: 150px;
+	height: 100%;*/
 }
 .Header h1{
 	font-size: 4.5rem;
 	text-shadow: 3px 3px 0px var(--primary);
 	letter-spacing: 3px;
-	transform: skewX(24deg) rotate(-5deg);
 	width: fit-content;
 	margin: 0 auto;
 }
@@ -64,6 +63,21 @@ img{ max-width: 100% }
 }
 .personage-content{
 	flex: 20%;
+}
+@media (max-width: 1060px){
+	.personage-content{
+		flex: 25%;
+	}
+}
+@media (max-width: 850px) {
+	.personage-content {
+		flex: 32%;
+	}
+}
+@media (max-width: 650px) {
+	.personage-content {
+		flex: 50%;
+	}
 }
 .personage{
 	display: flex;
@@ -190,4 +204,18 @@ img{ max-width: 100% }
 }
 .modal-list{
 	padding-left: 3rem;
+}
+.modal-info-acordeon{
+	margin-top: 2rem;
+	background-color: #ededed;
+	box-shadow: 3px 3px 4px #0000002e;
+	transition: .5s all linear;
+	visibility: hidden;
+	height: 0;
+}
+.modal-acordeon-show{
+	min-height: 20px;
+	padding: 1rem;
+	transition: .5s all linear;
+	visibility: visible;
 }

@@ -16,8 +16,7 @@ function App() {
   useMemo(() => {
     fetchCharactersData()
   }, [])
-
-  console.log(modal)
+  
   return (
     <>
       <Header />
