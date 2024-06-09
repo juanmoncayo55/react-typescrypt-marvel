@@ -17,6 +17,7 @@ import {
 	getStoriesForCharater
 } from './services/MarvelServices'
 
+//resultAll: ComicsCharacter | EventsCharacter | SeriesCharacter | StoriesCharacter,
 type MarvelStore = {
 	resultCharactersData: MarvelType,
 	resultCharacterById: CharacterByIdType,
@@ -38,6 +39,7 @@ type MarvelStore = {
 	setLoadingCharacter: (change: boolean) => void
 }
 
+//resultAll: {} as ComicsCharacter | {} as EventsCharacter | {} as SeriesCharacter | {} as StoriesCharacter,
 export const useMarvelStore = create<MarvelStore>()(devtools((set) => ({
 	resultCharactersData: {} as MarvelType,
 	resultCharacterById: {} as CharacterByIdType,

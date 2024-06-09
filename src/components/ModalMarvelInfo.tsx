@@ -1,6 +1,6 @@
 type ModalMarvelInfoProps = {
 	titleSection: any,
-	numberInfo: any,
+	numberInfo: number,
 	displayInfo: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, idTitle: string) => void
 }
 export default function ModalMarvelInfo({titleSection, numberInfo, displayInfo} : ModalMarvelInfoProps){
@@ -8,9 +8,11 @@ export default function ModalMarvelInfo({titleSection, numberInfo, displayInfo} 
 		<li className="modal-text">
 			<div className="modal-text-inter">
 				{titleSection}: <span>{numberInfo}</span>
-				<a href="#" onClick={(e) => displayInfo(e, titleSection)}>
-					<img src="/eye-solid.svg" className="modal-eye-img" />
-				</a>
+				{ numberInfo !== 0 ?
+					<a href="#" onClick={(e) => displayInfo(e, titleSection)}>
+						<img src="/eye-solid.svg" className="modal-eye-img" />
+					</a> : null
+				}
 			</div>
 		</li>
 	)
